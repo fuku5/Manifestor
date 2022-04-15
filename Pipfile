@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pfrl = "==0.3.0"
+matplotlib = "==3.2.2"
+jupyterlab = "==3.2.1"
+scipy = "*"
+pandas = "*"
+seaborn = "*"
+torch = "==1.11.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+jupyter = "jupyter lab  --no-browser"
+
+[packages.multiple_lunar_lander]
+git = "git@github.com:fuku5/multi_lunar_lander.git"

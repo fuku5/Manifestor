@@ -1,0 +1,13 @@
+__pycache__
+results/
+figs/
+data/
+records/
+tmp/
+.ipynb_checkpoints/
+*.log
+*.png
+*.gzip
+aaa
+.DS_Store
+my_batch.sh.o*
