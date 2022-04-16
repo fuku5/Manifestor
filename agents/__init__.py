@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from agents.meta import Meta_model_MLP, Meta_Transformer, Guesser_Transformer, User_Transformer, User_MLP, User_Transformer_Multi
+from agents.meta import Meta_model_MLP, Meta_Transformer, Guesser_Transformer
 from agents.a2c import make_A2C_model
 
 
