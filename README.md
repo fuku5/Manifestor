@@ -2,10 +2,9 @@
 The implementation of Manifestor and the other models for experiments.
 
 ## Quickstart
-- Download the datasets and place them to the following directory:
+- Download the datasets and place them to "./data/records/":
   - Unskilled dataset: https://drive.google.com/file/d/1lGoWOdZ4FFwW6Hi7V5sM8Hrf2gNhXOHB/view?usp=sharing
   - Skilled dataset: https://drive.google.com/file/d/146k2zVvUW1ghD3JvMVpLQchonxezbCeH/view?usp=sharing
-  - To: ./data/records/
 - Run jupyter and open main.ipynb
 ```bash
 pipenv install
