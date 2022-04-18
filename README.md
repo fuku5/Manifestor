@@ -9,7 +9,8 @@ The implementation of Manifestor and the other models for experiments.
 - Run jupyter and open main.ipynb
 ```bash
 pipenv install
-pipenv run jupyter
+pipenv shell
+jupyter lab
 ```
 
 ## To develop a dataset by yourself

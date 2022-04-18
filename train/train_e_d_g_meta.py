@@ -27,9 +27,7 @@ NUM_EPOCHS = 20
 NUM_WORKERS = 10
 
 SAVE_PATH = Path('data/meta_models')
-
 from train_meta import Human, calc_accuracy
-
 
 def reward_based_loss(y, labels_all0, labels_all1, rewards, goals0, goals1, goals2=None, x=[]):
     # first utterance in 60 frames
@@ -118,7 +116,6 @@ def reward_based_loss(y, labels_all0, labels_all1, rewards, goals0, goals1, goal
     loss = torch.mean(nll * u_mask * scores)
 
     return loss
-
 def goal_prediction_loss(y, labels_all0, labels_all1, rewards, goals0, goals1, goals2=None, x=[]):
     #g_prob = nn.functional.one_hot(goals0, 3)
 

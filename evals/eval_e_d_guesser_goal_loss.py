@@ -15,7 +15,7 @@ sys.path.append(str(ROOT_DIR))
 import agents
 import utils.record
 import utils.datasets
-import train.train_meta
+from train.train_meta import Human
 from agents import train_params
 
 device = torch.device('cuda:0')
@@ -25,7 +25,7 @@ def calc_score(memory,  guesser_path, model_path, translate):
     
     bound = int(len(memory)*0.5)
 
-    human = train.train_meta.Human('random')
+    human = Human('random')
     info = True
     params = agents.train_params['Transformer_state_seq']
     batch_size = 1

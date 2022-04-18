@@ -14,10 +14,9 @@ sys.path.append(str(ROOT_DIR))
 
 import agents
 import utils.record
-import train.train_meta
+from train.train_meta import Human 
 
 len_seq = 100
-device = torch.device('cuda:0')
 fig = None
 ax = None
 
@@ -56,7 +55,7 @@ def prepare_dataloader(memory, params, batch_size):
     bound = int(len(memory)*0.5)
     # use eval dataset
 
-    human = train.train_meta.Human('true_belief')
+    human = Human('true_belief')
     info = False
     #dataset = utils.datasets.DatasetAction(
     dataset = utils.datasets.Dataset(
@@ -211,6 +210,7 @@ def compare(data_loader, model, teachers, params, out_dir=None, out_name=None):
 
 
 if __name__ == '__main__':
+    global device
     parser = argparse.ArgumentParser()
     parser.add_argument('--model-path', type=str)
     parser.add_argument('--guesser-path', type=str, default=None)
@@ -222,6 +222,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     len_seq = args.len_seq
     model_path = args.model_path
+    device = torch.device('cuda:{}'.format(args.gpu))
     memory = utils.record.load(path=args.memory)
 
     params = agents.train_params['Transformer_state_seq']

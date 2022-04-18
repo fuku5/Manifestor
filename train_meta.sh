@@ -1,4 +1,10 @@
 MODE=$1
+DATASET_PATH=$2
+GPU_ID=$3
+ENCODER_DIR_PATH=$4
+ENCODER_SEED=$5
+MAPPING=$6
+N=$7
 
 
 if [ "${MODE}" = "optimal" ]; then

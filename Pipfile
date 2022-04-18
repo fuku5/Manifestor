@@ -17,8 +17,5 @@ torch = "==1.11.0"
 [requires]
 python_version = "3.7"
 
-[scripts]
-jupyter = "jupyter lab  --no-browser"
-
 [packages.multiple_lunar_lander]
 git = "git@github.com:fuku5/multi_lunar_lander.git"
